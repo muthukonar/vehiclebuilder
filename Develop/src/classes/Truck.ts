@@ -37,7 +37,7 @@ class Truck extends Vehicle {
       super();
 
 // TODO: The constructor should initialize the properties of the Truck class
-      this.vin = vin;
+    this.vin = vin;
     this.color = color;
     this.make = make;
     this.model = model;
