@@ -26,10 +26,10 @@ const truck1 = new Truck(
       "RAM",
       "RAM-1500",
       2024, 
-      8000,
+      2000,
       150,
       [],
-      20000);   
+      200);   
 
 // will use default wheels
 const car1 = new Car(

@@ -191,7 +191,7 @@ class Cli {
         parseInt(answers.year),
         parseInt(answers.weight),
         parseInt(answers.topSpeed),
-        [],
+        [new Wheel(answers.frontWheelDiameter,answers.frontWheelBrand),  new Wheel(answers.rearWheel,answers.rearWheelBrand)],
         parseInt(answers.towingCapacity) 
       );
       this.vehicles.push(truck);
@@ -267,7 +267,7 @@ class Cli {
         parseInt(answers.year),
         parseInt(answers.weight),
         parseInt(answers.topSpeed),
-        []
+        [new Wheel(answers.frontWheelDiameter,answers.frontWheelBrand),  new Wheel(answers.rearWheel,answers.rearWheelBrand)]
       );
       this.vehicles.push(motorbike);
       this.selectedVehicleVin = motorbike.vin;
@@ -414,14 +414,7 @@ class Cli {
           }
         }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
-        // if (selectedVehicle.vin === truck.vin) {
-        //   console.log('The truck cannot tow itself! Please select another vehicle.');
-        //   this.performActions();
-        // } else if (selectedVehicle.vin !== truck.vin) {
-        //   truck.abletotow(selectedVehicle);
-        //   this.performActions();
-        // }
-        // else
+        
 
         else if (answers.action === 'Wheelie') {
           for (let i = 0; i < this.vehicles.length; i++) {
