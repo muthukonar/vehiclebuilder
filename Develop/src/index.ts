@@ -22,14 +22,14 @@ const truck1 = new Truck(
 
     const truck2 = new Truck(
       Cli.generateVin(),
-      "red",
-      "Ford",
+      "black",
       "RAM",
-      2021, 
-      500,
-      120,
+      "RAM-1500",
+      2024, 
+      8000,
+      150,
       [],
-      1000);   
+      20000);   
 
 // will use default wheels
 const car1 = new Car(

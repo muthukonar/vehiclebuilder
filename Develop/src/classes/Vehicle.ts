@@ -74,6 +74,8 @@ class Vehicle implements Driveable {
     }
   }
 
+
+
   // Method to tow the vehicle
   tow(): void {
     // Check if the vehicle is started

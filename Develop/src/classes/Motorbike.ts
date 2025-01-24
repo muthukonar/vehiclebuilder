@@ -52,8 +52,13 @@ class Motorbike extends Vehicle {
     }
   }
   // TODO: Implement the wheelie method
-  wheelie(vehicle: Motorbike): void {
+  static wheelie(vehicle: Motorbike): void {
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
+    if (vehicle instanceof Motorbike){
+    console.log(`Motorbike ${vehicle.make} ${vehicle.model} is doing a wheelie!`);
+    }else{
+      console.log(`only Motorbikes can perform wheelie`);
+    }
   }
   // TODO: Override the printDetails method from the Vehicle class
   override printDetails(): void {
@@ -76,6 +81,7 @@ class Motorbike extends Vehicle {
     );
 }
   }
+
 
 // Export the Motorbike class as the default export
 export default Motorbike;

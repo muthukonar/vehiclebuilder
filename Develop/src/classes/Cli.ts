@@ -6,6 +6,9 @@ import Motorbike from "./Motorbike.js";
 import Wheel from "./Wheel.js";
 import Vehicle from "./Vehicle.js";
 
+
+
+
 // define the Cli class
 class Cli {
   // TODO: update the vehicles property to accept Truck and Motorbike objects as well
@@ -272,6 +275,8 @@ class Cli {
       });
   }
 
+  
+
   // method to find a vehicle to tow
   // TODO: add a parameter to accept a truck object
   findVehicleToTow(truck: Truck): void {
@@ -310,6 +315,7 @@ class Cli {
       });
   }
 
+
   // method to perform actions on a vehicle
   performActions(): void {
     inquirer
@@ -329,6 +335,7 @@ class Cli {
             'Turn left',
             'Reverse',
             'Tow',
+            'Wheelie',
             'Select or create another vehicle',
             'Exit',
           ],
@@ -407,6 +414,28 @@ class Cli {
           }
         }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
+        // if (selectedVehicle.vin === truck.vin) {
+        //   console.log('The truck cannot tow itself! Please select another vehicle.');
+        //   this.performActions();
+        // } else if (selectedVehicle.vin !== truck.vin) {
+        //   truck.abletotow(selectedVehicle);
+        //   this.performActions();
+        // }
+        // else
+
+        else if (answers.action === 'Wheelie') {
+          for (let i = 0; i < this.vehicles.length; i++) {
+            if (this.vehicles[i].vin === this.selectedVehicleVin) {
+              if (this.vehicles[i] instanceof Motorbike) {
+                Motorbike.wheelie(this.vehicles[i]);
+                return;
+              } else {
+                console.log('Only Motorbikes can perform a wheelie');
+            }
+          }
+        }
+        }
+
         else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
