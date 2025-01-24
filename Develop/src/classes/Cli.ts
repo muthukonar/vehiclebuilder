@@ -70,7 +70,7 @@ class Cli {
           this.createCar();
         }
         // TODO: add statements to create a truck or motorbike if the user selects the respective vehicle type
-        else if (answers.vehicleType === 'TYruck') {
+        else if (answers.vehicleType === 'Truck') {
           this.createTruck();
         }
       });
