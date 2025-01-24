@@ -17,8 +17,19 @@ const truck1 = new Truck(
     2021, 
     5000,
     120,
-    []);
-    // 10000);
+    [],
+    10000);
+
+    const truck2 = new Truck(
+      Cli.generateVin(),
+      "red",
+      "Ford",
+      "RAM",
+      2021, 
+      500,
+      120,
+      [],
+      1000);   
 
 // will use default wheels
 const car1 = new Car(
@@ -39,6 +50,7 @@ const motorbike1 = new Motorbike(Cli.generateVin(), "black", "Harley Davidson", 
 // push vehicles to array
 // TODO: uncomment once trucks are implemented
 vehicles.push(truck1);
+vehicles.push(truck2);
 vehicles.push(car1);
 // TODO: uncomment once motorbikes are implemented
 vehicles.push(motorbike1);

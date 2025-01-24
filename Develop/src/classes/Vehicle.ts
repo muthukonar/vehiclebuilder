@@ -73,6 +73,16 @@ class Vehicle implements Driveable {
       console.log('Start the vehicle first');
     }
   }
+
+  // Method to tow the vehicle
+  tow(): void {
+    // Check if the vehicle is started
+    if (this.started) {
+      console.log('Vehicle being towed');
+    } else {
+      console.log('Start the vehicle first');
+    }
+  }
 }
 
 // Export the Vehicle class
