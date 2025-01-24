@@ -17,9 +17,9 @@ class Motorbike extends Vehicle {
   weight: number;
   topSpeed: number;
   wheels: Wheel[];
-  
-  
-  
+
+
+
 
   // TODO: Create a constructor that accepts the properties of the Motorbike class
   constructor(
@@ -32,7 +32,7 @@ class Motorbike extends Vehicle {
     topSpeed: number,
     wheels: Wheel[]
   ) {
-  
+
     // TODO: The constructor should call the constructor of the parent class, Vehicle
     super();
     // TODO: The constructor should initialize the properties of the Motorbike class
@@ -54,18 +54,18 @@ class Motorbike extends Vehicle {
   // TODO: Implement the wheelie method
   static wheelie(vehicle: Motorbike): void {
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
-    if (vehicle instanceof Motorbike){
-    console.log(`Motorbike ${vehicle.make} ${vehicle.model} is doing a wheelie!`);
-    }else{
+    if (vehicle instanceof Motorbike) {
+      console.log(`Motorbike ${vehicle.make} ${vehicle.model} is doing a wheelie!`);
+    } else {
       console.log(`only Motorbikes can perform wheelie`);
     }
   }
   // TODO: Override the printDetails method from the Vehicle class
   override printDetails(): void {
-  // TODO: The method should call the printDetails method of the parent class  // TODO: The method should log the details of the Motorbike
-  super.printDetails();
-  // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
-  console.log(`VIN: ${this.vin}`);
+    // TODO: The method should call the printDetails method of the parent class  // TODO: The method should log the details of the Motorbike
+    super.printDetails();
+    // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
+    console.log(`VIN: ${this.vin}`);
     console.log(`Color: ${this.color}`);
     console.log(`Make: ${this.make}`);
     console.log(`Model: ${this.model}`);
@@ -79,8 +79,8 @@ class Motorbike extends Vehicle {
     console.log(
       `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
     );
-}
   }
+}
 
 
 // Export the Motorbike class as the default export

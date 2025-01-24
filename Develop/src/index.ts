@@ -10,26 +10,26 @@ const vehicles = [];
 
 // TODO: uncomment once trucks are implemented
 const truck1 = new Truck(
-    Cli.generateVin(),
-    "red",
-    "Ford",
-    "F-150",
-    2021, 
-    5000,
-    120,
-    [],
-    10000);
+  Cli.generateVin(),
+  "red",
+  "Ford",
+  "F-150",
+  2021,
+  5000,
+  120,
+  [],
+  10000);
 
-    const truck2 = new Truck(
-      Cli.generateVin(),
-      "black",
-      "RAM",
-      "RAM-1500",
-      2024, 
-      2000,
-      150,
-      [],
-      200);   
+const truck2 = new Truck(
+  Cli.generateVin(),
+  "black",
+  "RAM",
+  "RAM-1500",
+  2024,
+  2000,
+  150,
+  [],
+  200);
 
 // will use default wheels
 const car1 = new Car(
